@@ -1,0 +1,96 @@
+.carousel-container {
+  margin: 4% auto;
+  width: 380px;
+  height: 300px;
+  position: relative;
+  perspective: 1200px;
+  z-index: 10;
+  
+}
+
+#carousel {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  animation: rotation 40s infinite linear;
+ 
+}
+
+#carousel figure {
+  display: block;
+  position: absolute;
+  width: 290px;
+  height: 200px;
+  left: 60px;
+  top: 50px;
+  overflow: hidden;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  transition: box-shadow 0.4s ease, filter 0.4s ease;
+  
+}
+
+/* 6 images around the cylinder */
+#carousel figure:nth-child(1) { transform: rotateY(0deg) translateZ(280px); }
+#carousel figure:nth-child(2) { transform: rotateY(60deg) translateZ(280px); }
+#carousel figure:nth-child(3) { transform: rotateY(120deg) translateZ(280px); }
+#carousel figure:nth-child(4) { transform: rotateY(180deg) translateZ(280px); }
+#carousel figure:nth-child(5) { transform: rotateY(240deg) translateZ(280px); }
+#carousel figure:nth-child(6) { transform: rotateY(300deg) translateZ(280px); }
+
+#carousel figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  display: block;
+   background-color: black;
+}
+
+/* Glow on hover */
+#carousel figure:hover {
+  box-shadow: 0 0 25px 8px rgba(255, 215, 0, 0.8);
+  filter: brightness(1.15);
+}
+
+/* Caption content */
+#carousel figure figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Show text on hover */
+#carousel figure:hover figcaption {
+  opacity: 1;
+}
+
+@keyframes rotation {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+  
+}
+
+/* SVG icon on top-left */
+.svg-icon {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 4px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
