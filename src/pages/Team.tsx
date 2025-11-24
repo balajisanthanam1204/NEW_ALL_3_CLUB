@@ -197,7 +197,7 @@ const clubs = {
         name: 'Lakshanaa A M',
         role: 'Secretary',
         year: 'III Year ECE B',
-        image: '/RACE-MEMBERS/B S AARTI ECE.jpg',
+        image: '/RACE-MEMBERS/LAKSHANA ECE.jpg',
         social: { github: '#', linkedin: '#', email: 'lakshanaa@race.com' }
       },
       {
@@ -344,19 +344,24 @@ export default function Team() {
           </motion.div>
 
           {/* Selected Club Logo */}
-          <motion.div
-            key={`${selectedClub}-logo`}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="flex justify-center mb-8"
-          >
-            <img
-              src={currentClub.logo}
-              alt={`${currentClub.name} Logo`}
-              className="w-32 h-32 object-contain"
-            />
-          </motion.div>
+
+<motion.div
+  key={`${selectedClub}-logo`}
+  initial={{ opacity: 0, y: 10 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5 }}
+  className="flex justify-center mb-8"
+>
+
+  {/* colour of the logo background */}
+<div className="p-6 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 hover:from-primary/15 hover:to-primary/10 backdrop-blur-sm border border-border/20 transition-all duration-300 hover:neon-glow">
+  <img
+    src={currentClub.logo}
+    alt={`${currentClub.name} Logo`}
+    className="w-32 h-32 object-contain"
+  />
+</div>
+</motion.div>
 
           {/* Club Full Name */}
           <motion.div

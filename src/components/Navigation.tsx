@@ -75,15 +75,15 @@ export default function Navigation({ onWatchReel }: NavigationProps) {
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b border-border/50">
-        <div className="container mx-auto px-8 py-6">
+        <div className="container mx-auto px-3 py-3">
           <div className="flex items-center justify-between">
-<Link to="/" className="flex items-center gap-2 sm:gap-3 lg:gap-4 hover:opacity-80 transition-opacity">
+<Link to="/" className="flex items-center gap-2 sm:gap-3 lg:gap-1 hover:opacity-80 transition-opacity px-4 py-2 rounded-lg bg-primary/5 hover:bg-primary/10 backdrop-blur-sm border border-border/20">
   {logos.map((logo, index) => (
     <div key={logo.name} className="flex items-center">
       <img
         src={logo.url}
         alt={logo.alt}
-        className="h-8 sm:h-10 lg:h-12 w-auto object-contain brightness-100 hover:brightness-110 transition-all"
+        className="h-11 sm:h-10 lg:h-12 w-auto object-contain brightness-100 hover:brightness-110 transition-all"
       />
       {/* Separator line between logos (hidden on mobile for first two) */}
       {index < logos.length - 1 && (
