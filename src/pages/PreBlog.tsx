@@ -11,7 +11,7 @@ const benefits = [
   {
     icon: Award,
     title: 'Recognition Certificate',
-    description: 'Receive an official certificate from ECEA, IETE-SF, and RACE clubs'
+    description: 'Receive an official certificate from ECEA club'
   },
   {
     icon: Sparkles,
