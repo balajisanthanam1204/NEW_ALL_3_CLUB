@@ -246,7 +246,7 @@ const clubs = {
         name: 'Lohith Ashwa S',
         role: 'Mentor',
         year: 'III Year ECE B',
-        image: '/RACE-MEMBERS/LOHITH ASHWA S ECE.png',
+        image: '/RACE-MEMBERS/LOHITH ASHWA S ECE.jpg',
         social: { github: '#', linkedin: '#', email: 'lohith@race.com' }
       },
       {
