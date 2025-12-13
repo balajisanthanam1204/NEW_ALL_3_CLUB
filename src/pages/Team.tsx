@@ -282,7 +282,7 @@ const clubs = {
         role: 'Mentor',
         year: 'III Year ECE C',
         image: '/RACE-MEMBERS/SUDHAN S ECE.png',
-        social: { github: '#', linkedin: '#', email: 'sudhan@race.com' }
+        social: { github: 'https://github.com/sudhans18', linkedin: '#', email: 'sudhan@race.com' }
       },
       {
         name: 'Rithvik R',
